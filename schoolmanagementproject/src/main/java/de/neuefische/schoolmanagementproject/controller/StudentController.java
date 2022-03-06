@@ -30,6 +30,15 @@ public List<Student> listStudents(){
     
 }
 
+@PutMapping(value = "/list/{id}")
+public String updateStudent(@PathVariable String id, @RequestBody Student student){
+
+    studentRepository.updateStudentById(id, student);
+    return "Student updated";
+}
+
+
+
 @PostMapping("/create")
 public void createStudent(@RequestBody Student student){
 
@@ -41,10 +50,7 @@ public void deleteStudent(@PathVariable String id){
 studentRepository.deleteById(id);
 }
 
-@PutMapping("/edit/{id}")
-public void editStudent(@PathVariable String id){
-   
-}
+
 
 
 

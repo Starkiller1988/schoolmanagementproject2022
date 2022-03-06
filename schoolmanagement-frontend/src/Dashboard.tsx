@@ -151,7 +151,7 @@ function renderStudent(st) {
               <CardFooter>
                 <Row>
                   <Col sm="6">
-                    <Button block outline color="primary" onClick={() => editStudent(st.id)}>
+                    <Button block outline color="primary" onClick={() => updateStudent(st.id)}>
                       Edit
                     </Button>
                     </Col>
@@ -176,7 +176,8 @@ function deleteStudent(id: any): void {
 
 
 
-function editStudent(id: any): void {
-  axios.post(`http://localhost:7070/edit/${id}`);
+
+function updateStudent(id: any): void {
+  axios.post(`http://localhost:7070/list/${id}`);
 }
 

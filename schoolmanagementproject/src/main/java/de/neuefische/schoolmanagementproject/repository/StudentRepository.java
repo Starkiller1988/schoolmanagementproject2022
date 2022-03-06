@@ -9,9 +9,9 @@ import de.neuefische.schoolmanagementproject.model.Student;
 @Repository
 public interface StudentRepository extends MongoRepository<Student, String> {
 
+    void updateStudentById(String id, Student student);
 
 
-  
 
-    
+
 }

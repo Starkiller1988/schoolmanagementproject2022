@@ -68,6 +68,15 @@ public void setBootcamp(String bootcamp) {
     this.bootcamp = bootcamp;
 }
 
+public Student(String id, String firstName, String lastName, String age, String bootcamp, String teacher) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.bootcamp = bootcamp;
+    this.teacher = teacher;
+}
+
 
 
 
